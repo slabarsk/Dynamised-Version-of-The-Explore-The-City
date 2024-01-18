@@ -224,6 +224,14 @@ def logout():
     logout_user()
     return redirect(url_for('index'))
 
+@app.route('/about')
+def about():
+    return render_template("about_us.html")
+
+@app.route('/contact')
+def contact():
+    return render_template("contact.html")
+
 # @app.route('/login', methods=['GET', 'POST'])
 # def login():
 #     error = None  
