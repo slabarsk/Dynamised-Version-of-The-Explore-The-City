@@ -148,7 +148,22 @@
         margin-bottom: 1rem;
       }
     </style>
+    <script>
+      function initMap() {
+        var hotelLocation = { lat: 36.8616, lng: 30.637 };
+        var map = new google.maps.Map(document.getElementById("map"), {
+          center: hotelLocation,
+          zoom: 14,
+        });
+        var marker = new google.maps.Marker({
+          position: hotelLocation,
+          map: map,
+          title: "{{ city[1] }}",
+        });
+      }
+    </script>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbhs-qDzm2EKZ3HLuHHFCo8ovA5yvcgmY&libraries=places&callback=initMap"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
