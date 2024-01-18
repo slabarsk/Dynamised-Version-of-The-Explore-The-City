@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Şehirler</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="https://cdn.pixabay.com/photo/2020/09/16/18/39/icon-5577198_1280.png" width="70" height="70" alt="">
+        </a>
+    
+        <ul class="navbar-nav ml-auto">
+            {% if 'user_id' in session %}
+
+                <li class="nav-item">
+                    <a class="nav-link text-success" href="#">Merhaba, {{ session['user_name'] }}</a>
+                </li>
+            {% else %}
+
+                <li class="nav-item">
+                    <a class="nav-link text-danger" href="{{ url_for('login') }}">Giriş Yap</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+    <div class="container mt-3">
+        <h2>Şehirler</h2>
+        <div class="row">
+            {% for city in cities %}
+                <div class="col-md-4">
+                    <div class="card" style="width: 15rem;">
+                        <a href="{{ url_for('city_detail', city_id=city[0]) }}">
+                            <img class="card-img-top" src="{{ city[7] }}" alt="City Image">
+                        </a>
+                        <div class="card-body">
+                            <h5 class="card-title">{{ city[1] }}</h5>
+                            <p class="card-text">{{ city[2] }}</p>
+                            <!-- <a href="{{ url_for('city_detail', city_id=city[0]) }}" class="btn btn-primary">Detaylı Bilgi</a> -->
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
