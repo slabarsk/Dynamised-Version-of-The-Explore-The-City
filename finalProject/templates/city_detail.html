@@ -51,13 +51,20 @@
             <div class="col-md-6 text-center">
                 <div class="hotel-info">
                     <h4>Touristic Places</h4>
-                    <p>Yorum Sayısı:{{ city[4] }}</p>
+                    <p>{{ city[4] }}</p>
                 </div>
             </div>
             <div class="col-md-6 text-center">
                 <div class="hotel-info">
                     <h4>Restaurants</h4>
-                    <p>Lokasyon:{{city[5]}}</p>
+                    <p>{{city[5]}}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h4>Harita</h4>
+                    <div id="map" style="height: 400px; width: 1100px;">
+                    </div> 
                 </div>
             </div>
         </div>
@@ -71,11 +78,25 @@
             margin-left: 35%;
         }
     </style>
+    <script>
+        function initMap() {
+     var hotelLocation = { lat: 36.8616, lng: 30.6370 };
+      var map = new google.maps.Map(document.getElementById('map'), {
+        center: hotelLocation,
+        zoom: 14,
+      });
+      var marker = new google.maps.Marker({
+        position: hotelLocation,
+        map: map,
+        title: '{{ city[1] }}', 
+      });
+    }
+    </script>
 
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCbhs-qDzm2EKZ3HLuHHFCo8ovA5yvcgmY&libraries=places&callback=initMap"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 
 </html>
-
