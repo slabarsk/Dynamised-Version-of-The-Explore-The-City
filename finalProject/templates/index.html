@@ -31,7 +31,7 @@
     }
 
     .card-img-top {
-      height: 250px; /* You can adjust the height as needed */
+      height: 250px; 
       object-fit: cover;
     }
     #cards{
@@ -60,18 +60,10 @@
           </li>        
           <li class="nav-item">
             <a class="nav-link" href="#city-section">City</a>
-          </li>     
-          <li class="nav-item dropdown">
-          
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-section">Contact Us</a>
+          </li>         
         </ul>
       <ul class="navbar-nav ml-auto">
         {% if current_user.is_authenticated %}
@@ -123,12 +115,8 @@
         </div>
     </div>
     {% endfor %}
-</div>
-
-    
-
   </div>
-
+</div>
   <div id="explore-section" class="container px-4 py-5" id="featured-3">
     <h2 class="pb-2 border-bottom">Why Explore With Us?</h2>
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
@@ -139,17 +127,14 @@
         </div>
         <h3 class="fs-2">Professional</h3>
         <p>We work as hard as we can to ensure that the memories, journeys and fun moments you will have are achieved stress-free. In this process, we offer you an interactive service with our professional team by renewing our destinations in Turkey every day with your feedback.</p>
-        <!--<img src="{{ url_for('static', filename='chat-square-heart.svg') }}" alt="chat-square-heart" height="30">
-                </div>-->
-      </div>
+        </div>
       <div class="feature col">
         <div
           class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
           <img src="{{ url_for('static', filename='bus-front.svg') }}" alt="bus-front" height="30">
         </div>
         <h3 class="fs-2">Our Aim</h3>
-        <p>At our core, we believe that traveling should be an exciting and positive experience, not stressful. By quickly bringing extraordinary destinations in Turkey to your front door, we hope to revolutionize the way people think about seeing new places and provide our customers with a better, more personalized experience.</p>
-        
+        <p>At our core, we believe that traveling should be an exciting and positive experience, not stressful. By quickly bringing extraordinary destinations in Turkey to your front door, we hope to revolutionize the way people think about seeing new places and provide our customers with a better, more personalized experience.</p>       
       </div>
       <div class="feature col">
         <div
@@ -185,8 +170,7 @@
       </div>
     </div>
   </div>
-
-  <div class="container">
+  <div id="contact-section" class="container">
     <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
       <div class="col mb-3">
         <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
@@ -194,43 +178,29 @@
             <use xlink:href="#bootstrap"></use>
           </svg>
         </a>
-        <p class="text-body-secondary">© 2023</p>
+        <p class="text-body-secondary">© 2024</p>
       </div>
-
       <div class="col mb-3">
-
       </div>
-
       <div class="col mb-3">
-        <h5>Section</h5>
+        <h5>Phone Number</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">05424218536</a></li>
+          
         </ul>
       </div>
-
       <div class="col mb-3">
-        <h5>Section</h5>
+        <h5>Social Media </h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Twitter</a></li>
+          
         </ul>
       </div>
-
       <div class="col mb-3">
-        <h5>Section</h5>
+        <h5>E-mail</h5>
         <ul class="nav flex-column">
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
-          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Email</a></li>
+          
         </ul>
       </div>
     </footer>
@@ -241,59 +211,6 @@
     }
     function openLoginPage() {
     window.location.href = 'login.html';
-      }
-      function toggleForms() {
-      const loginContainer = document.getElementById('login-container');
-      const registerContainer = document.getElementById('register-container');
-
-      if (loginContainer.style.display === 'none') {
-        loginContainer.style.display = 'block';
-        registerContainer.style.display = 'none';
-      } else {
-        loginContainer.style.display = 'none';
-        registerContainer.style.display = 'block';
-      }
-      }
-
-      function login() {
-      const email = document.getElementById('login-email').value;
-      const password = document.getElementById('login-password').value;
-
-      if (!email || !password) {
-        alert('Lütfen tüm alanları doldurun.');
-        return;
-      }
-
-      alert('Sucessfully Login!\nEmail: ' + email + '\nŞifre: ' + password);
-      }
-
-      function register() {
-      const name = document.getElementById('register-name').value;
-      const surname = document.getElementById('register-surname').value;
-      const email = document.getElementById('register-email').value;
-      const phone = document.getElementById('register-phone').value;
-      const password = document.getElementById('register-password').value;
-
-      if (!name || !surname || !email || !phone || !password) {
-        alert('Lütfen tüm alanları doldurun.');
-        return;
-      }
-
-      alert('Register Is Succesful!\nİsim: ' + name + '\nSoyisim: ' + surname + '\nEmail: ' + email + '\nTelefon: ' + phone + '\nŞifre: ' + password);
-      }
-
-      function checkPassword() {
-      var password = document.getElementById("register-password").value;
-      var confirmPassword = document.getElementById("confirm-password").value;
-      var errorMessage = document.getElementById("error-message");
-      var errorContainer = document.getElementById("error-container");
-
-      if (password !== confirmPassword) {
-          alert('Şifreler aynı olmalıdır');
-      } else {
-          errorMessage.innerHTML = "";
-          errorContainer.style.display = "none"; 
-      }
       }
 
   </script>
